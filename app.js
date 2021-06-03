@@ -14,10 +14,13 @@ const orderRoutes = require('./api/routes/order');
 
 //mongoose
 mongoose.connect('mongodb+srv://geethapriya8kb:nancy@8kb@cluster0.thmvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-{ useNewUrlParser: true,
-useUnifiedTopology: true} );
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
 
 app.use(morgan('dev'));//gives logs like which request and time it took to execute
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
