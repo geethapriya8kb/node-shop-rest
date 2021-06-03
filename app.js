@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/order');
+const userRoutes =require('./api/routes/user');
 // app.use((request,response, next)=>{
 //     response.status(200).json({
 //         message:'It works!'
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
 //routes which should handle requests
 app.use('/products', productRoutes);
 app.use('/order', orderRoutes);
+app.use('/user', userRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Not found');
