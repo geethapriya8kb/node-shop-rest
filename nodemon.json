@@ -1,5 +1,6 @@
 {
     "env":{
-        "MONGO_ATLA_PW":"nancy@8kb"
+        "MONGO_ATLA_PW":"nancy@8kb",
+        "JWT_KEY":"secret"
     }
 }
